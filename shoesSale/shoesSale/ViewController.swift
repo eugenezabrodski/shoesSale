@@ -45,8 +45,15 @@ class ViewController: UIViewController {
   
     
     @IBAction func actionButtonBuy(_ sender: Any) {
+        showAlert(title: "Thanks for buy", message: "Please enter your adress")
     }
     
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "NEXT", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 
     
 }
